@@ -4,9 +4,9 @@ window.addEventListener("load",()=>{
         navigator.geolocation.getCurrentPosition((position)=>{
             let lon= position.coords.longitude;
             let lat= position.coords.latitude;
-            const url= `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}4&lon=${lon}&appid=${apikey}`;
+            const url= `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=44.34&lon=10.99&appid=${apikey}`;
             
-            console.log(url)
+            console.log("url=" + url)
             fetch(url).then((res)=>{
                 return res.json();
             }).then((data)=>{
